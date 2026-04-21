@@ -1,0 +1,47 @@
+---
+layout: default
+meta_title: "AsyncAPI Specs | APIs.io"
+meta_description: "Browse AsyncAPI event specifications across the APIs.io network."
+---
+
+<style>
+  .page-hero { text-align: center; padding: 2rem 0 1.5rem; }
+  .page-hero h1 { font-size: 2rem; margin-bottom: 0.5rem; }
+  .page-hero p { color: #666; margin-bottom: 1.5rem; }
+  .filter-bar { max-width: 960px; margin: 0 auto 1.5rem; }
+  .item-list { max-width: 960px; margin: 0 auto; }
+  .item-row { background: white; border: 1px solid #e3e7ee; border-left: 3px solid #1e40af; border-radius: 8px; padding: 0.75rem 1.25rem; margin-bottom: 0.4rem; transition: all 0.15s; }
+  .item-row:hover { border-color: #1e40af; box-shadow: 0 1px 4px rgba(30,64,175,0.08); }
+  .item-row h3 { font-size: 0.95rem; font-weight: 600; margin: 0; }
+  .item-row h3 a { color: #1a1a2e; text-decoration: none; }
+  .item-row h3 a:hover { color: #1e40af; }
+  .item-provider { font-size: 0.8rem; color: #6c757d; }
+  .item-desc { font-size: 0.85rem; color: #666; margin-top: 0.25rem; }
+</style>
+
+<div class="page-hero">
+  <h1>AsyncAPI Event Specifications</h1>
+  <p>Browse <strong>{{ site.asyncapis | size }}</strong> event specifications across the APIs.io network</p>
+  <div class="filter-bar">
+    <input type="text" class="form-control" id="item-filter" placeholder="Filter specs..." style="max-width: 400px; margin: 0 auto;">
+  </div>
+</div>
+
+<div class="item-list" id="item-list">
+  {% for async in site.asyncapis %}
+  <div class="item-row" data-name="{{ async.name | downcase }} {{ async.provider_name | downcase }}">
+    <h3><a href="{{ async.url }}">{{ async.name }}</a></h3>
+    <div class="item-provider"><a href="https://providers.apis.io/providers/{{ async.provider_slug }}/">{{ async.provider_name }}</a></div>
+    {% if async.description %}<div class="item-desc">{{ async.description | strip_html | truncate: 200 }}</div>{% endif %}
+  </div>
+  {% endfor %}
+</div>
+
+<script>
+document.getElementById('item-filter').addEventListener('input', function() {
+  var q = this.value.toLowerCase();
+  document.querySelectorAll('.item-row').forEach(function(item) {
+    item.style.display = item.getAttribute('data-name').indexOf(q) !== -1 ? '' : 'none';
+  });
+});
+</script>

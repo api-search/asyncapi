@@ -1,0 +1,16 @@
+---
+layout: none
+---
+[
+{% assign idx = 0 %}{% for async in site.asyncapis %}{
+"i":{{ idx }},
+"type":"asyncapi",
+"n":{{ async.name | jsonify }},
+"d":{{ async.description | strip_html | strip_newlines | truncate: 300 | jsonify }},
+"t":{{ async.tags | jsonify }},
+"p":{{ async.provider_name | default: async.provider_slug | jsonify }},
+"ps":{{ async.provider_slug | jsonify }},
+"u":"{{ async.url | absolute_url }}"
+}{% assign idx = idx | plus: 1 %}{% unless forloop.last %},{% endunless %}
+{% endfor %}
+]
