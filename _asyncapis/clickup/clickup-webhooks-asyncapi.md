@@ -1,4 +1,77 @@
 ---
+api_specs:
+- filename: clickup-tasks-openapi.yml
+  format: yaml
+  label: ClickUp Tasks API
+  slug: tasks-api
+  spec_type: OpenAPI
+  url: https://raw.githubusercontent.com/api-evangelist/clickup/refs/heads/main/openapi/clickup-tasks-openapi.yml
+- filename: clickup-spaces-openapi.yml
+  format: yaml
+  label: ClickUp Spaces API
+  slug: spaces-api
+  spec_type: OpenAPI
+  url: https://raw.githubusercontent.com/api-evangelist/clickup/refs/heads/main/openapi/clickup-spaces-openapi.yml
+- filename: clickup-lists-openapi.yml
+  format: yaml
+  label: ClickUp Lists API
+  slug: lists-api
+  spec_type: OpenAPI
+  url: https://raw.githubusercontent.com/api-evangelist/clickup/refs/heads/main/openapi/clickup-lists-openapi.yml
+- filename: clickup-folders-openapi.yml
+  format: yaml
+  label: ClickUp Folders API
+  slug: folders-api
+  spec_type: OpenAPI
+  url: https://raw.githubusercontent.com/api-evangelist/clickup/refs/heads/main/openapi/clickup-folders-openapi.yml
+- filename: clickup-goals-openapi.yml
+  format: yaml
+  label: ClickUp Goals API
+  slug: goals-api
+  spec_type: OpenAPI
+  url: https://raw.githubusercontent.com/api-evangelist/clickup/refs/heads/main/openapi/clickup-goals-openapi.yml
+- filename: clickup-comments-openapi.yml
+  format: yaml
+  label: ClickUp Comments API
+  slug: comments-api
+  spec_type: OpenAPI
+  url: https://raw.githubusercontent.com/api-evangelist/clickup/refs/heads/main/openapi/clickup-comments-openapi.yml
+- filename: clickup-teams-openapi.yml
+  format: yaml
+  label: ClickUp Teams (Workspaces) API
+  slug: teams-api
+  spec_type: OpenAPI
+  url: https://raw.githubusercontent.com/api-evangelist/clickup/refs/heads/main/openapi/clickup-teams-openapi.yml
+- filename: clickup-webhooks-openapi.yml
+  format: yaml
+  label: ClickUp Webhooks API
+  slug: webhooks-api
+  spec_type: OpenAPI
+  url: https://raw.githubusercontent.com/api-evangelist/clickup/refs/heads/main/openapi/clickup-webhooks-openapi.yml
+- filename: clickup-custom-fields-openapi.yml
+  format: yaml
+  label: ClickUp Custom Fields API
+  slug: custom-fields-api
+  spec_type: OpenAPI
+  url: https://raw.githubusercontent.com/api-evangelist/clickup/refs/heads/main/openapi/clickup-custom-fields-openapi.yml
+- filename: clickup-time-tracking-openapi.yml
+  format: yaml
+  label: ClickUp Time Tracking API
+  slug: time-tracking-api
+  spec_type: OpenAPI
+  url: https://raw.githubusercontent.com/api-evangelist/clickup/refs/heads/main/openapi/clickup-time-tracking-openapi.yml
+- filename: clickup-views-openapi.yml
+  format: yaml
+  label: ClickUp Views API
+  slug: views-api
+  spec_type: OpenAPI
+  url: https://raw.githubusercontent.com/api-evangelist/clickup/refs/heads/main/openapi/clickup-views-openapi.yml
+- filename: clickup-oauth-openapi.yml
+  format: yaml
+  label: ClickUp OAuth API
+  slug: oauth-api
+  spec_type: OpenAPI
+  url: https://raw.githubusercontent.com/api-evangelist/clickup/refs/heads/main/openapi/clickup-oauth-openapi.yml
 channels:
 - description: Channel for all ClickUp webhook events. Events are delivered as HTTP POST requests with a JSON body. The X-Signature header contains the HMAC-SHA256 signature for payload verification.
   name: /webhook

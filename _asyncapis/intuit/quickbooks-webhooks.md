@@ -1,4 +1,11 @@
 ---
+api_specs:
+- filename: quickbooks-accounting.yml
+  format: yaml
+  label: QuickBooks Online Accounting API
+  slug: quickbooks-accounting
+  spec_type: OpenAPI
+  url: https://raw.githubusercontent.com/api-evangelist/intuit/refs/heads/main/openapi/quickbooks-accounting.yml
 channels:
 - description: The channel through which Intuit delivers webhook notifications to your application. Your endpoint must accept POST requests and respond with HTTP 200 within 10 seconds. Failed deliveries are retried, but notifications are delivered on a best-effort basis.
   name: webhookNotification

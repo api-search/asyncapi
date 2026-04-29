@@ -1,4 +1,11 @@
 ---
+api_specs:
+- filename: cloud-custodian-mailer-asyncapi.yml
+  format: yaml
+  label: Cloud Custodian C7n-Mailer
+  slug: cloud-custodian-c7n-mailer
+  spec_type: AsyncAPI
+  url: https://raw.githubusercontent.com/api-evangelist/cloud-custodian/refs/heads/main/asyncapi/cloud-custodian-mailer-asyncapi.yml
 channels:
 - description: Channel through which Cloud Custodian publishes policy violation notification messages. Each message describes the policy that matched, the resources that were affected, and the account context. The c7n-mailer subscribes to this channel to deliver alerts to operators.
   name: /policy-notification

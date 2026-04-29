@@ -1,4 +1,29 @@
 ---
+api_specs:
+- filename: braintree-payments-openapi.yml
+  format: yaml
+  label: Braintree Payments API
+  slug: payments-api
+  spec_type: OpenAPI
+  url: https://raw.githubusercontent.com/api-evangelist/braintree/refs/heads/main/openapi/braintree-payments-openapi.yml
+- filename: braintree-webhooks-asyncapi.yml
+  format: yaml
+  label: Braintree Webhooks
+  slug: webhooks
+  spec_type: AsyncAPI
+  url: https://raw.githubusercontent.com/api-evangelist/braintree/refs/heads/main/asyncapi/braintree-webhooks-asyncapi.yml
+- filename: braintree-payments-openapi.yml
+  format: yaml
+  label: Braintree Vault API
+  slug: vault-api
+  spec_type: OpenAPI
+  url: https://raw.githubusercontent.com/api-evangelist/braintree/refs/heads/main/openapi/braintree-payments-openapi.yml
+- filename: braintree-subscriptions-openapi.yml
+  format: yaml
+  label: Braintree Subscriptions API
+  slug: subscriptions-api
+  spec_type: OpenAPI
+  url: https://raw.githubusercontent.com/api-evangelist/braintree/refs/heads/main/openapi/braintree-subscriptions-openapi.yml
 channels:
 - description: The merchant's webhook endpoint that receives HTTP POST notifications from Braintree. All event types are delivered to the same configured URL. The bt_payload contains a Base64-encoded, signed XML document with the event details. Merchants must verify the bt_signature against the payload using their private API key before processing.
   name: /webhook

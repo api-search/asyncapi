@@ -1,4 +1,17 @@
 ---
+api_specs:
+- filename: adobe-campaign-standard-openapi-original.yml
+  format: yaml
+  label: Adobe Campaign Standard API
+  slug: standard-api
+  spec_type: OpenAPI
+  url: https://raw.githubusercontent.com/api-evangelist/adobe-campaign/refs/heads/main/openapi/adobe-campaign-standard-openapi-original.yml
+- filename: adobe-campaign-classic-openapi-original.yml
+  format: yaml
+  label: Adobe Campaign Classic API
+  slug: classic-api
+  spec_type: OpenAPI
+  url: https://raw.githubusercontent.com/api-evangelist/adobe-campaign/refs/heads/main/openapi/adobe-campaign-classic-openapi-original.yml
 channels:
 - description: Channel for triggering transactional email messages. Events submitted here are processed asynchronously by the Campaign transactional messaging engine and result in personalized email delivery to the specified recipient.
   name: transactionalEvent/email

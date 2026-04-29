@@ -1,4 +1,23 @@
 ---
+api_specs:
+- filename: argo-workflows-openapi.yml
+  format: yaml
+  label: Argo Workflows API
+  slug: argo-workflows-api
+  spec_type: OpenAPI
+  url: https://raw.githubusercontent.com/api-evangelist/argo/refs/heads/main/openapi/argo-workflows-openapi.yml
+- filename: argo-cd-openapi.yml
+  format: yaml
+  label: Argo CD API
+  slug: argo-cd-api
+  spec_type: OpenAPI
+  url: https://raw.githubusercontent.com/api-evangelist/argo/refs/heads/main/openapi/argo-cd-openapi.yml
+- filename: argo-events-asyncapi.yml
+  format: yaml
+  label: Argo Events API
+  slug: argo-events-api
+  spec_type: AsyncAPI
+  url: https://raw.githubusercontent.com/api-evangelist/argo/refs/heads/main/asyncapi/argo-events-asyncapi.yml
 channels:
 - description: HTTP webhook channel for receiving events from external systems such as GitHub, GitLab, Bitbucket, or custom HTTP callers. Each EventSource can define multiple named webhook endpoints on different ports.
   name: /webhook/{eventName}

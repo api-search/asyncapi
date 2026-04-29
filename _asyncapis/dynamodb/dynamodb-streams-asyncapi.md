@@ -1,4 +1,17 @@
 ---
+api_specs:
+- filename: dynamodb-openapi.yml
+  format: yaml
+  label: Amazon DynamoDB API
+  slug: ''
+  spec_type: OpenAPI
+  url: https://raw.githubusercontent.com/api-evangelist/dynamodb/refs/heads/main/openapi/dynamodb-openapi.yml
+- filename: dynamodb-streams-asyncapi.yml
+  format: yaml
+  label: Amazon DynamoDB Streams API
+  slug: ''
+  spec_type: AsyncAPI
+  url: https://raw.githubusercontent.com/api-evangelist/dynamodb/refs/heads/main/asyncapi/dynamodb-streams-asyncapi.yml
 channels:
 - description: A DynamoDB Stream for a specific table. When DynamoDB Streams is enabled on a table, every modification to data items in the table is captured as a stream record. Each stream record is written in near-real time and appears in the stream in the order in which the actual modifications occurred. Stream records are organized into shards, which are containers for stream records.
   name: streamRecord

@@ -1,4 +1,11 @@
 ---
+api_specs:
+- filename: jira-cloud-platform-rest-api-openapi.yml
+  format: yaml
+  label: Jira Cloud Platform REST API
+  slug: ''
+  spec_type: OpenAPI
+  url: https://raw.githubusercontent.com/api-evangelist/jira/refs/heads/main/openapi/jira-cloud-platform-rest-api-openapi.yml
 channels:
 - description: The endpoint that receives all Jira Cloud webhook event deliveries. The event type is identified by the webhookEvent field in the JSON payload. Jira retries failed deliveries (non-200 responses) up to 8 times with exponential backoff.
   name: /webhook

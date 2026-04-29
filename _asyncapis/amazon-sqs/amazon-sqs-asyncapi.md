@@ -1,4 +1,11 @@
 ---
+api_specs:
+- filename: amazon-sqs-openapi.yml
+  format: yaml
+  label: Amazon SQS API
+  slug: ''
+  spec_type: OpenAPI
+  url: https://raw.githubusercontent.com/api-evangelist/amazon-sqs/refs/heads/main/openapi/amazon-sqs-openapi.yml
 channels:
 - description: A standard Amazon SQS queue. Standard queues offer maximum throughput, best-effort ordering, and at-least-once delivery. Messages can be received out of the order in which they were sent, and a message might be delivered more than once.
   name: standardQueue

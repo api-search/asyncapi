@@ -1,4 +1,17 @@
 ---
+api_specs:
+- filename: cilium-api-openapi.yml
+  format: yaml
+  label: Cilium API
+  slug: cilium-api
+  spec_type: OpenAPI
+  url: https://raw.githubusercontent.com/api-evangelist/cilium/refs/heads/main/openapi/cilium-api-openapi.yml
+- filename: cilium-hubble-asyncapi.yml
+  format: yaml
+  label: Hubble API
+  slug: hubble-api
+  spec_type: AsyncAPI
+  url: https://raw.githubusercontent.com/api-evangelist/cilium/refs/heads/main/asyncapi/cilium-hubble-asyncapi.yml
 channels:
 - description: Streaming channel for network flow events. Clients send a GetFlowsRequest specifying filters and receive a continuous stream of Flow messages representing network connections observed by the eBPF datapath.
   name: /observer.Observer/GetFlows

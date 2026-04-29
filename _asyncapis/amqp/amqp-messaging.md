@@ -1,4 +1,11 @@
 ---
+api_specs:
+- filename: amqp-messaging.yml
+  format: yaml
+  label: AMQP Messaging API
+  slug: ''
+  spec_type: AsyncAPI
+  url: https://raw.githubusercontent.com/api-evangelist/amqp/refs/heads/main/asyncapi/amqp-messaging.yml
 channels:
 - description: Publish/subscribe channel for order creation events. Messages are published to a topic exchange and routed to all bound queues.
   name: orderCreated

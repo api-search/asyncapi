@@ -1,4 +1,17 @@
 ---
+api_specs:
+- filename: calendly-scheduling-api-openapi.yml
+  format: yaml
+  label: Calendly Scheduling API
+  slug: scheduling-api
+  spec_type: OpenAPI
+  url: https://raw.githubusercontent.com/api-evangelist/calendly/refs/heads/main/openapi/calendly-scheduling-api-openapi.yml
+- filename: calendly-webhook-api-asyncapi.yml
+  format: yaml
+  label: Calendly Webhook API
+  slug: webhook-api
+  spec_type: AsyncAPI
+  url: https://raw.githubusercontent.com/api-evangelist/calendly/refs/heads/main/asyncapi/calendly-webhook-api-asyncapi.yml
 channels:
 - description: Channel for invitee.created events. Triggered when a new invitee schedules a meeting through Calendly. Also triggered as part of a reschedule operation (the new booking). The payload includes the full invitee resource with event details, contact information, and answers to custom questions.
   name: /webhook/invitee-created

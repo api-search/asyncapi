@@ -1,4 +1,17 @@
 ---
+api_specs:
+- filename: cloudevents-http-asyncapi.yml
+  format: yaml
+  label: CloudEvents Specification
+  slug: cloudevents-spec
+  spec_type: AsyncAPI
+  url: https://raw.githubusercontent.com/api-evangelist/cloudevents/refs/heads/main/asyncapi/cloudevents-http-asyncapi.yml
+- filename: cloudevents-subscriptions-openapi.yml
+  format: yaml
+  label: CloudEvents Subscriptions API
+  slug: cloudevents-subscriptions
+  spec_type: OpenAPI
+  url: https://raw.githubusercontent.com/api-evangelist/cloudevents/refs/heads/main/openapi/cloudevents-subscriptions-openapi.yml
 channels:
 - description: The subscriber's sink endpoint receives HTTP POST requests from the CloudEvents broker. Each request carries one CloudEvent (single delivery mode) or a batch of CloudEvents (batch delivery mode). The subscriber acknowledges receipt with a 2xx HTTP response.
   name: /

@@ -1,4 +1,23 @@
 ---
+api_specs:
+- filename: airbnb-homes-api-openapi.yml
+  format: yaml
+  label: Airbnb Homes API
+  slug: homes-api
+  spec_type: OpenAPI
+  url: https://raw.githubusercontent.com/api-evangelist/airbnb/refs/heads/main/openapi/airbnb-homes-api-openapi.yml
+- filename: airbnb-activities-api-openapi.yml
+  format: yaml
+  label: Airbnb Activities API
+  slug: activities-api
+  spec_type: OpenAPI
+  url: https://raw.githubusercontent.com/api-evangelist/airbnb/refs/heads/main/openapi/airbnb-activities-api-openapi.yml
+- filename: airbnb-webhooks-asyncapi.yml
+  format: yaml
+  label: Airbnb Webhooks API
+  slug: webhooks-api
+  spec_type: AsyncAPI
+  url: https://raw.githubusercontent.com/api-evangelist/airbnb/refs/heads/main/asyncapi/airbnb-webhooks-asyncapi.yml
 channels:
 - description: The webhook endpoint that receives all Airbnb event notifications. Events are delivered as HTTP POST requests with a JSON payload. Each event includes a type field to identify the event category and a signature header for verification.
   name: /webhook

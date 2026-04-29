@@ -1,4 +1,53 @@
 ---
+api_specs:
+- filename: brevo-transactional-email-openapi.yml
+  format: yaml
+  label: Brevo Transactional Email API
+  slug: transactional-email-api
+  spec_type: OpenAPI
+  url: https://raw.githubusercontent.com/api-evangelist/brevo/refs/heads/main/openapi/brevo-transactional-email-openapi.yml
+- filename: brevo-email-campaigns-openapi.yml
+  format: yaml
+  label: Brevo Email Campaigns API
+  slug: email-campaigns-api
+  spec_type: OpenAPI
+  url: https://raw.githubusercontent.com/api-evangelist/brevo/refs/heads/main/openapi/brevo-email-campaigns-openapi.yml
+- filename: brevo-contacts-openapi.yml
+  format: yaml
+  label: Brevo Contacts API
+  slug: contacts-api
+  spec_type: OpenAPI
+  url: https://raw.githubusercontent.com/api-evangelist/brevo/refs/heads/main/openapi/brevo-contacts-openapi.yml
+- filename: brevo-transactional-sms-openapi.yml
+  format: yaml
+  label: Brevo Transactional SMS API
+  slug: transactional-sms-api
+  spec_type: OpenAPI
+  url: https://raw.githubusercontent.com/api-evangelist/brevo/refs/heads/main/openapi/brevo-transactional-sms-openapi.yml
+- filename: brevo-whatsapp-openapi.yml
+  format: yaml
+  label: Brevo WhatsApp API
+  slug: whatsapp-api
+  spec_type: OpenAPI
+  url: https://raw.githubusercontent.com/api-evangelist/brevo/refs/heads/main/openapi/brevo-whatsapp-openapi.yml
+- filename: brevo-ecommerce-openapi.yml
+  format: yaml
+  label: Brevo eCommerce API
+  slug: ecommerce-api
+  spec_type: OpenAPI
+  url: https://raw.githubusercontent.com/api-evangelist/brevo/refs/heads/main/openapi/brevo-ecommerce-openapi.yml
+- filename: brevo-conversations-openapi.yml
+  format: yaml
+  label: Brevo Conversations API
+  slug: conversations-api
+  spec_type: OpenAPI
+  url: https://raw.githubusercontent.com/api-evangelist/brevo/refs/heads/main/openapi/brevo-conversations-openapi.yml
+- filename: brevo-webhooks-openapi.yml
+  format: yaml
+  label: Brevo Webhooks API
+  slug: webhooks-api
+  spec_type: OpenAPI
+  url: https://raw.githubusercontent.com/api-evangelist/brevo/refs/heads/main/openapi/brevo-webhooks-openapi.yml
 channels:
 - description: Transactional email event notifications including delivery status, opens, clicks, bounces, spam reports, and unsubscribes.
   name: /transactional-email-events

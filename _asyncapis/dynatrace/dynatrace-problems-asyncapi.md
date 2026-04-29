@@ -1,4 +1,41 @@
 ---
+api_specs:
+- filename: dynatrace-metrics-api-v2-openapi.yml
+  format: yaml
+  label: Dynatrace Metrics API v2
+  slug: dynatrace-metrics-api-v2
+  spec_type: OpenAPI
+  url: https://raw.githubusercontent.com/api-evangelist/dynatrace/refs/heads/main/openapi/dynatrace-metrics-api-v2-openapi.yml
+- filename: dynatrace-log-monitoring-api-v2-openapi.yml
+  format: yaml
+  label: Dynatrace Log Monitoring API v2
+  slug: dynatrace-log-monitoring-api-v2
+  spec_type: OpenAPI
+  url: https://raw.githubusercontent.com/api-evangelist/dynatrace/refs/heads/main/openapi/dynatrace-log-monitoring-api-v2-openapi.yml
+- filename: dynatrace-account-management-api-openapi.yml
+  format: yaml
+  label: Dynatrace Account Management API
+  slug: dynatrace-account-management-api
+  spec_type: OpenAPI
+  url: https://raw.githubusercontent.com/api-evangelist/dynatrace/refs/heads/main/openapi/dynatrace-account-management-api-openapi.yml
+- filename: dynatrace-events-api-v2-openapi.yml
+  format: yaml
+  label: Dynatrace Events API v2
+  slug: dynatrace-events-api-v2
+  spec_type: OpenAPI
+  url: https://raw.githubusercontent.com/api-evangelist/dynatrace/refs/heads/main/openapi/dynatrace-events-api-v2-openapi.yml
+- filename: dynatrace-problems-api-v2-openapi.yml
+  format: yaml
+  label: Dynatrace Problems API v2
+  slug: dynatrace-problems-api-v2
+  spec_type: OpenAPI
+  url: https://raw.githubusercontent.com/api-evangelist/dynatrace/refs/heads/main/openapi/dynatrace-problems-api-v2-openapi.yml
+- filename: dynatrace-entities-api-v2-openapi.yml
+  format: yaml
+  label: Dynatrace Entities API v2
+  slug: dynatrace-entities-api-v2
+  spec_type: OpenAPI
+  url: https://raw.githubusercontent.com/api-evangelist/dynatrace/refs/heads/main/openapi/dynatrace-entities-api-v2-openapi.yml
 channels:
 - description: 'Represents the client''s webhook endpoint that receives Dynatrace problem notifications. Dynatrace sends an HTTP POST to this channel when a problem is opened, updated, merged, or resolved. The channel operates in a push model: Dynatrace (publisher) pushes events to the client''s webhook (subscriber).'
   name: /webhook/problems

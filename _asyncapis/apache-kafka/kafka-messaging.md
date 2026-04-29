@@ -1,4 +1,23 @@
 ---
+api_specs:
+- filename: kafka-rest-proxy.yml
+  format: yaml
+  label: Kafka REST Proxy API
+  slug: kafka-rest-proxy-api
+  spec_type: OpenAPI
+  url: https://raw.githubusercontent.com/api-evangelist/apache-kafka/refs/heads/main/openapi/kafka-rest-proxy.yml
+- filename: kafka-connect.yml
+  format: yaml
+  label: Kafka Connect REST API
+  slug: kafka-connect-api
+  spec_type: OpenAPI
+  url: https://raw.githubusercontent.com/api-evangelist/apache-kafka/refs/heads/main/openapi/kafka-connect.yml
+- filename: kafka-messaging.yml
+  format: yaml
+  label: Apache Kafka Messaging API
+  slug: kafka-messaging-api
+  spec_type: AsyncAPI
+  url: https://raw.githubusercontent.com/api-evangelist/apache-kafka/refs/heads/main/asyncapi/kafka-messaging.yml
 channels:
 - description: A Kafka topic is a category or feed name to which records are published. Topics are partitioned, and each partition is an ordered, immutable sequence of records that is continually appended to.
   name: '{topic}'

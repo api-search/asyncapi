@@ -1,4 +1,11 @@
 ---
+api_specs:
+- filename: amazon-sns-api-openapi.yml
+  format: yaml
+  label: Amazon SNS API
+  slug: ''
+  spec_type: OpenAPI
+  url: https://raw.githubusercontent.com/api-evangelist/amazon-sns/refs/heads/main/openapi/amazon-sns-api-openapi.yml
 channels:
 - description: HTTP/HTTPS notification delivery channel. When a message is published to a topic with HTTP/S subscribers, SNS sends an HTTP POST request to each confirmed subscriber endpoint containing the notification in JSON format. The endpoint must return a 2xx status code to acknowledge receipt. SNS includes headers such as x-amz-sns-message-type, x-amz-sns-message-id, and x-amz-sns-topic-arn.
   name: /sns/http-notification

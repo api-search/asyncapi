@@ -1,4 +1,11 @@
 ---
+api_specs:
+- filename: adobe-photoshop-api-openapi-original.yml
+  format: yaml
+  label: Adobe Photoshop API
+  slug: photoshop-api
+  spec_type: OpenAPI
+  url: https://raw.githubusercontent.com/api-evangelist/adobe-photoshop/refs/heads/main/openapi/adobe-photoshop-api-openapi-original.yml
 channels:
 - description: Notification delivered when a Photoshop API job has completed successfully. The event payload contains the job ID, output locations, and job metadata. Applies to all PSD service operations including document operations, renditions, Smart Objects, text editing, and Actions execution.
   name: photoshop/job/completed

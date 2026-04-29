@@ -1,4 +1,17 @@
 ---
+api_specs:
+- filename: amazon-api-gateway-openapi.yaml
+  format: yaml
+  label: Amazon API Gateway REST API
+  slug: rest-api
+  spec_type: OpenAPI
+  url: https://raw.githubusercontent.com/api-evangelist/amazon-api-gateway/refs/heads/main/openapi/amazon-api-gateway-openapi.yaml
+- filename: amazon-api-gateway-websocket-asyncapi.yml
+  format: yaml
+  label: Amazon API Gateway WebSocket API
+  slug: websocket-api
+  spec_type: AsyncAPI
+  url: https://raw.githubusercontent.com/api-evangelist/amazon-api-gateway/refs/heads/main/asyncapi/amazon-api-gateway-websocket-asyncapi.yml
 channels:
 - description: The $connect route is invoked when a client first connects to the WebSocket API. This is where authentication and authorization occur. The connection is established only if the integration returns a successful response. Query string parameters and headers from the initial HTTP upgrade request are available to the integration.
   name: connect

@@ -1,4 +1,11 @@
 ---
+api_specs:
+- filename: amazon-kinesis-data-streams-openapi.yml
+  format: yaml
+  label: Amazon Kinesis Data Streams
+  slug: ''
+  spec_type: OpenAPI
+  url: https://raw.githubusercontent.com/api-evangelist/amazon-kinesis/refs/heads/main/openapi/amazon-kinesis-data-streams-openapi.yml
 channels:
 - description: A shard within a Kinesis data stream. Each shard is an append-only, ordered sequence of data records. Producers write records to shards via partition keys, and consumers read records sequentially. Each shard provides 1 MiB/sec write capacity and 2 MiB/sec read capacity (shared among polling consumers), or 2 MiB/sec dedicated throughput per enhanced fan-out consumer.
   name: kinesisStreamShard

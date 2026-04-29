@@ -1,4 +1,17 @@
 ---
+api_specs:
+- filename: pulsar-admin.yml
+  format: yaml
+  label: Apache Pulsar Admin REST API
+  slug: apache-pulsar-admin-rest-api
+  spec_type: OpenAPI
+  url: https://raw.githubusercontent.com/api-evangelist/apache-pulsar/refs/heads/main/openapi/pulsar-admin.yml
+- filename: pulsar-messaging.yml
+  format: yaml
+  label: Apache Pulsar Messaging API
+  slug: apache-pulsar-messaging-api
+  spec_type: AsyncAPI
+  url: https://raw.githubusercontent.com/api-evangelist/apache-pulsar/refs/heads/main/asyncapi/pulsar-messaging.yml
 channels:
 - description: A persistent Pulsar topic. Messages are durably stored in Apache BookKeeper and available for replay. Supports partitioned and non-partitioned topics.
   name: persistent/{tenant}/{namespace}/{topic}
