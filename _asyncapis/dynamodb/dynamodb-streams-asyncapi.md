@@ -12,6 +12,12 @@ api_specs:
   slug: ''
   spec_type: AsyncAPI
   url: https://raw.githubusercontent.com/api-evangelist/dynamodb/refs/heads/main/asyncapi/dynamodb-streams-asyncapi.yml
+- filename: openapi.yaml
+  format: yaml
+  label: Amazon DynamoDB Accelerator (DAX) API
+  slug: ''
+  spec_type: OpenAPI
+  url: https://api.apis.guru/v2/specs/amazonaws.com/dax/2017-04-19/openapi.yaml
 channels:
 - description: A DynamoDB Stream for a specific table. When DynamoDB Streams is enabled on a table, every modification to data items in the table is captured as a stream record. Each stream record is written in near-real time and appears in the stream in the order in which the actual modifications occurred. Stream records are organized into shards, which are containers for stream records.
   name: streamRecord
@@ -80,7 +86,6 @@ source_yaml_url: https://raw.githubusercontent.com/api-evangelist/dynamodb/refs/
 spec_file: asyncapi/dynamodb-streams-asyncapi.yml
 spec_url: https://raw.githubusercontent.com/api-evangelist/dynamodb/refs/heads/main/asyncapi/dynamodb-streams-asyncapi.yml
 tags:
-- AWS
 - Cloud
 - Database
 - Document Store

@@ -78,7 +78,6 @@ source_yaml_url: https://raw.githubusercontent.com/api-evangelist/amazon-sqs/ref
 spec_file: asyncapi/amazon-sqs-asyncapi.yml
 spec_url: https://raw.githubusercontent.com/api-evangelist/amazon-sqs/refs/heads/main/asyncapi/amazon-sqs-asyncapi.yml
 tags:
-- AWS
 - Cloud
 - Distributed Systems
 - Messaging

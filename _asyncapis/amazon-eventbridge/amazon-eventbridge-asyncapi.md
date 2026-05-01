@@ -82,7 +82,6 @@ spec_file: asyncapi/amazon-eventbridge-asyncapi.yml
 spec_url: https://raw.githubusercontent.com/api-evangelist/amazon-eventbridge/refs/heads/main/asyncapi/amazon-eventbridge-asyncapi.yml
 tags:
 - Amazon Web Services
-- AWS
 - Event Bus
 - Event-Driven
 - Events

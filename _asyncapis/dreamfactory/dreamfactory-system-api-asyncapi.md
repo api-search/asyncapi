@@ -1,4 +1,11 @@
 ---
+api_specs:
+- filename: dreamfactory-system-api-openapi.yml
+  format: yaml
+  label: DreamFactory System API
+  slug: system-api
+  spec_type: OpenAPI
+  url: https://raw.githubusercontent.com/api-evangelist/dreamfactory/refs/heads/main/openapi/dreamfactory-system-api-openapi.yml
 channels:
 - description: Fired before processing any admin resource request. Scripts can inspect or modify the request before it reaches the handler.
   name: system.admin.pre_process

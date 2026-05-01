@@ -91,7 +91,6 @@ source_yaml_url: https://raw.githubusercontent.com/api-evangelist/amazon-sns/ref
 spec_file: asyncapi/amazon-sns-notifications-asyncapi.yml
 spec_url: https://raw.githubusercontent.com/api-evangelist/amazon-sns/refs/heads/main/asyncapi/amazon-sns-notifications-asyncapi.yml
 tags:
-- AWS
 - Email
 - Messaging
 - Notifications

@@ -1,4 +1,11 @@
 ---
+api_specs:
+- filename: google-pub-sub-openapi.yml
+  format: yaml
+  label: Google Pub/Sub
+  slug: google-pub-sub
+  spec_type: OpenAPI
+  url: https://raw.githubusercontent.com/api-evangelist/google-pub-sub/refs/heads/main/openapi/google-pub-sub-openapi.yml
 channels:
 - description: A named resource to which messages are sent by publishers and from which messages are delivered to subscribers.
   name: projects/{projectId}/topics/{topicId}

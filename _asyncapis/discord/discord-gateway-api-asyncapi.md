@@ -1,11 +1,11 @@
 ---
 api_specs:
-- filename: discord-rest-api-openapi.yml
+- filename: discord-api-spec
   format: yaml
   label: Discord REST API
   slug: discord-rest-api
   spec_type: OpenAPI
-  url: https://raw.githubusercontent.com/api-evangelist/discord/refs/heads/main/openapi/discord-rest-api-openapi.yml
+  url: https://github.com/discord/discord-api-spec
 - filename: discord-gateway-api-asyncapi.yml
   format: yaml
   label: Discord Gateway API

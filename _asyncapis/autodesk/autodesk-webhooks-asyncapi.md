@@ -1,4 +1,77 @@
 ---
+api_specs:
+- filename: autodesk-authentication-openapi.yml
+  format: yaml
+  label: Autodesk Authentication API
+  slug: authentication-api
+  spec_type: OpenAPI
+  url: https://raw.githubusercontent.com/api-evangelist/autodesk/refs/heads/main/openapi/autodesk-authentication-openapi.yml
+- filename: autodesk-data-management-openapi.yml
+  format: yaml
+  label: Autodesk Data Management API
+  slug: data-management-api
+  spec_type: OpenAPI
+  url: https://raw.githubusercontent.com/api-evangelist/autodesk/refs/heads/main/openapi/autodesk-data-management-openapi.yml
+- filename: autodesk-model-derivative-openapi.yml
+  format: yaml
+  label: Autodesk Model Derivative API
+  slug: model-derivative-api
+  spec_type: OpenAPI
+  url: https://raw.githubusercontent.com/api-evangelist/autodesk/refs/heads/main/openapi/autodesk-model-derivative-openapi.yml
+- filename: autodesk-design-automation-openapi.yml
+  format: yaml
+  label: Autodesk Design Automation API
+  slug: design-automation-api
+  spec_type: OpenAPI
+  url: https://raw.githubusercontent.com/api-evangelist/autodesk/refs/heads/main/openapi/autodesk-design-automation-openapi.yml
+- filename: autodesk-webhooks-openapi.yml
+  format: yaml
+  label: Autodesk Webhooks API
+  slug: webhooks-api
+  spec_type: OpenAPI
+  url: https://raw.githubusercontent.com/api-evangelist/autodesk/refs/heads/main/openapi/autodesk-webhooks-openapi.yml
+- filename: autodesk-reality-capture-openapi.yml
+  format: yaml
+  label: Autodesk Reality Capture API
+  slug: reality-capture-api
+  spec_type: OpenAPI
+  url: https://raw.githubusercontent.com/api-evangelist/autodesk/refs/heads/main/openapi/autodesk-reality-capture-openapi.yml
+- filename: autodesk-sustainability-data-openapi.yml
+  format: yaml
+  label: Autodesk Sustainability Data API
+  slug: sustainability-data-api
+  spec_type: OpenAPI
+  url: https://raw.githubusercontent.com/api-evangelist/autodesk/refs/heads/main/openapi/autodesk-sustainability-data-openapi.yml
+- filename: autodesk-parameters-openapi.yml
+  format: yaml
+  label: Autodesk Parameters API
+  slug: parameters-api
+  spec_type: OpenAPI
+  url: https://raw.githubusercontent.com/api-evangelist/autodesk/refs/heads/main/openapi/autodesk-parameters-openapi.yml
+- filename: autodesk-tandem-data-openapi.yml
+  format: yaml
+  label: Autodesk Tandem Data API
+  slug: tandem-data-api
+  spec_type: OpenAPI
+  url: https://raw.githubusercontent.com/api-evangelist/autodesk/refs/heads/main/openapi/autodesk-tandem-data-openapi.yml
+- filename: autodesk-flow-graph-engine-openapi.yml
+  format: yaml
+  label: Autodesk Flow Graph Engine API
+  slug: flow-graph-engine-api
+  spec_type: OpenAPI
+  url: https://raw.githubusercontent.com/api-evangelist/autodesk/refs/heads/main/openapi/autodesk-flow-graph-engine-openapi.yml
+- filename: autodesk-acc-account-admin-openapi.yml
+  format: yaml
+  label: Autodesk ACC Account Admin API
+  slug: acc-account-admin-api
+  spec_type: OpenAPI
+  url: https://raw.githubusercontent.com/api-evangelist/autodesk/refs/heads/main/openapi/autodesk-acc-account-admin-openapi.yml
+- filename: autodesk-bim360-openapi.yml
+  format: yaml
+  label: Autodesk BIM 360 API
+  slug: bim-360-api
+  spec_type: OpenAPI
+  url: https://raw.githubusercontent.com/api-evangelist/autodesk/refs/heads/main/openapi/autodesk-bim360-openapi.yml
 channels:
 - description: Triggered when a new version of an item is added in Data Management (Autodesk Docs, BIM 360 Docs, Fusion Team).
   name: /data-management/version-added

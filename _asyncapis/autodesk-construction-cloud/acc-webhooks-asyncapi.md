@@ -1,4 +1,17 @@
 ---
+api_specs:
+- filename: acc-admin-openapi.yml
+  format: yaml
+  label: Autodesk Construction Cloud Admin API
+  slug: acc-admin-api
+  spec_type: OpenAPI
+  url: https://raw.githubusercontent.com/api-evangelist/autodesk-construction-cloud/refs/heads/main/openapi/acc-admin-openapi.yml
+- filename: acc-issues-openapi.yml
+  format: yaml
+  label: Autodesk Construction Cloud Issues API
+  slug: acc-issues-api
+  spec_type: OpenAPI
+  url: https://raw.githubusercontent.com/api-evangelist/autodesk-construction-cloud/refs/heads/main/openapi/acc-issues-openapi.yml
 channels:
 - description: Events for construction issue lifecycle changes
   name: issues

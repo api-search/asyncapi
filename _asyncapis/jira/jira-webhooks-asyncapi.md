@@ -1,11 +1,23 @@
 ---
 api_specs:
-- filename: jira-cloud-platform-rest-api-openapi.yml
-  format: yaml
+- filename: swagger-v3.v3.json
+  format: json
   label: Jira Cloud Platform REST API
   slug: ''
   spec_type: OpenAPI
-  url: https://raw.githubusercontent.com/api-evangelist/jira/refs/heads/main/openapi/jira-cloud-platform-rest-api-openapi.yml
+  url: https://dac-static.atlassian.com/cloud/jira/platform/swagger-v3.v3.json
+- filename: swagger.v3.json
+  format: json
+  label: Jira Software Cloud REST API
+  slug: ''
+  spec_type: OpenAPI
+  url: https://dac-static.atlassian.com/cloud/jira/software/swagger.v3.json
+- filename: swagger.v3.json
+  format: json
+  label: Jira Service Management REST API
+  slug: ''
+  spec_type: OpenAPI
+  url: https://dac-static.atlassian.com/cloud/jira/service-desk/swagger.v3.json
 channels:
 - description: The endpoint that receives all Jira Cloud webhook event deliveries. The event type is identified by the webhookEvent field in the JSON payload. Jira retries failed deliveries (non-200 responses) up to 8 times with exponential backoff.
   name: /webhook

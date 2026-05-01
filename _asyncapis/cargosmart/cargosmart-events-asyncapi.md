@@ -1,4 +1,29 @@
 ---
+api_specs:
+- filename: cargosmart-shipment-tracking-openapi.yml
+  format: yaml
+  label: CargoSmart Container Booking API
+  slug: cargosmart-container-booking-api
+  spec_type: OpenAPI
+  url: https://raw.githubusercontent.com/api-evangelist/cargosmart/refs/heads/main/openapi/cargosmart-shipment-tracking-openapi.yml
+- filename: cargosmart-shipment-tracking-openapi.yml
+  format: yaml
+  label: CargoSmart Shipment Tracking API
+  slug: cargosmart-shipment-tracking-api
+  spec_type: OpenAPI
+  url: https://raw.githubusercontent.com/api-evangelist/cargosmart/refs/heads/main/openapi/cargosmart-shipment-tracking-openapi.yml
+- filename: cargosmart-shipment-tracking-openapi.yml
+  format: yaml
+  label: CargoSmart Vessel Schedule API
+  slug: cargosmart-vessel-schedule-api
+  spec_type: OpenAPI
+  url: https://raw.githubusercontent.com/api-evangelist/cargosmart/refs/heads/main/openapi/cargosmart-shipment-tracking-openapi.yml
+- filename: cargosmart-shipment-tracking-openapi.yml
+  format: yaml
+  label: CargoSmart Shipping Documentation API
+  slug: cargosmart-shipping-documents-api
+  spec_type: OpenAPI
+  url: https://raw.githubusercontent.com/api-evangelist/cargosmart/refs/heads/main/openapi/cargosmart-shipment-tracking-openapi.yml
 channels:
 - description: Published when a container tracking event occurs (gate in/out, load, discharge, arrival, departure).
   name: container.event

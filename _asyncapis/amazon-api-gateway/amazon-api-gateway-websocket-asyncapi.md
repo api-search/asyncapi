@@ -1,11 +1,11 @@
 ---
 api_specs:
-- filename: amazon-api-gateway-openapi.yaml
+- filename: API_Operations.html
   format: yaml
   label: Amazon API Gateway REST API
   slug: rest-api
   spec_type: OpenAPI
-  url: https://raw.githubusercontent.com/api-evangelist/amazon-api-gateway/refs/heads/main/openapi/amazon-api-gateway-openapi.yaml
+  url: https://docs.aws.amazon.com/apigateway/latest/api/API_Operations.html
 - filename: amazon-api-gateway-websocket-asyncapi.yml
   format: yaml
   label: Amazon API Gateway WebSocket API
@@ -91,7 +91,6 @@ source_yaml_url: https://raw.githubusercontent.com/api-evangelist/amazon-api-gat
 spec_file: asyncapi/amazon-api-gateway-websocket-asyncapi.yml
 spec_url: https://raw.githubusercontent.com/api-evangelist/amazon-api-gateway/refs/heads/main/asyncapi/amazon-api-gateway-websocket-asyncapi.yml
 tags:
-- AWS
 - Gateway
 - HTTP API
 - REST API

@@ -1,11 +1,17 @@
 ---
 api_specs:
-- filename: boomi-platform-rest-api-openapi.yml
+- filename: OpenAPI_3_0
   format: yaml
   label: Boomi Platform REST API
   slug: platform-rest-api
   spec_type: OpenAPI
-  url: https://raw.githubusercontent.com/api-evangelist/boomi/refs/heads/main/openapi/boomi-platform-rest-api-openapi.yml
+  url: https://developer.boomi.com/docs/APIs/PlatformAPI/Introduction/OpenAPI_3_0
+- filename: OpenAPI_3_0
+  format: yaml
+  label: Boomi Platform Partner API
+  slug: platform-partner-api
+  spec_type: OpenAPI
+  url: https://developer.boomi.com/docs/APIs/PlatformAPI/Introduction/OpenAPI_3_0
 - filename: boomi-datahub-api-openapi.yml
   format: yaml
   label: Boomi DataHub API
