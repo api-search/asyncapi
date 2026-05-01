@@ -1,0 +1,94 @@
+---
+api_specs:
+- filename: fly-io-machines-api-openapi.yml
+  format: yaml
+  label: Fly.io Machines API
+  slug: machines-api
+  spec_type: OpenAPI
+  url: https://raw.githubusercontent.com/api-evangelist/fly-io/refs/heads/main/openapi/fly-io-machines-api-openapi.yml
+- filename: fly-io-extensions-api-openapi.yml
+  format: yaml
+  label: Fly.io Extensions API
+  slug: extensions-api
+  spec_type: OpenAPI
+  url: https://raw.githubusercontent.com/api-evangelist/fly-io/refs/heads/main/openapi/fly-io-extensions-api-openapi.yml
+channels:
+- description: Fly.io platform endpoint that receives webhook notifications from extension providers about resource lifecycle changes. Providers post to this channel to notify Fly.io when asynchronously provisioned resources become ready, when resource configuration changes, or when resources are removed.
+  name: /api/hooks/extensions/{provider_name}
+  operation: publish
+  operation_id: receiveProviderWebhook
+  summary: Receive a lifecycle webhook from an extension provider
+- description: Provider-hosted endpoint that receives CloudEvents-format webhook notifications from Fly.io about machine and account lifecycle events. Providers register this endpoint with Fly.io and must verify the HMAC-SHA256 signature on all incoming payloads.
+  name: /extensions/events
+  operation: subscribe
+  operation_id: receiveFlyioMachineEvent
+  summary: Receive a machine or account event from Fly.io
+description: The Fly.io Extensions webhook system delivers real-time event notifications in both directions between Fly.io and extension providers. Fly.io sends CloudEvents-format payloads to the provider's registered endpoint URL when machine lifecycle events occur that are relevant to an extension resource. Extension providers send lifecycle status updates back to Fly.io at the platform webhook endpoint when asynchronously provisioned resources become ready, are updated, or are deleted. All webhook payloads in both directions are signed using HMAC-SHA256 with separate shared secrets, allowing each party to verify authenticity before processing events.
+layout: asyncapi
+messages:
+- description: Sent by an extension provider to confirm that an asynchronously provisioned extension resource is now ready. The payload includes the resource ID and the environment variable configuration to inject into the user's Fly App.
+  name: ResourceCreated
+  summary: Notifies Fly.io that an extension resource has been provisioned
+  title: Extension Resource Created
+- description: Sent by an extension provider when a resource's configuration changes, such as after a plan upgrade or region change. The updated config object is applied to the user's Fly App environment variables.
+  name: ResourceUpdated
+  summary: Notifies Fly.io that an extension resource has been updated
+  title: Extension Resource Updated
+- description: Sent by an extension provider when a resource has been cleaned up and is no longer available. Fly.io removes the associated environment variables from the user's Fly App on receipt of this event.
+  name: ResourceDeleted
+  summary: Notifies Fly.io that an extension resource has been deleted
+  title: Extension Resource Deleted
+- description: Fly.io sends this CloudEvent to the provider when a Fly Machine associated with an extension resource starts running. The provider can use this event to initialize connections or perform startup tasks.
+  name: MachineStarted
+  summary: Notifies the provider that a Fly Machine has started
+  title: Fly Machine Started
+- description: Fly.io sends this CloudEvent to the provider when a Fly Machine associated with an extension resource stops. The provider can use this event to release resources or record usage.
+  name: MachineStopped
+  summary: Notifies the provider that a Fly Machine has stopped
+  title: Fly Machine Stopped
+- description: Fly.io sends this CloudEvent to the provider when a Fly Machine associated with an extension resource is permanently destroyed. Providers should clean up any resources or associations tied to this machine instance.
+  name: MachineDestroyed
+  summary: Notifies the provider that a Fly Machine has been destroyed
+  title: Fly Machine Destroyed
+- description: Fly.io sends this CloudEvent to the provider when an account or organization change occurs that may affect extension resources, such as a user being removed from an organization or a billing status change.
+  name: AccountChanged
+  summary: Notifies the provider that a Fly.io account has changed
+  title: Fly.io Account Changed
+name: Fly.io Extensions Webhook Events
+provider_name: fly-io
+provider_slug: fly-io
+servers:
+- description: Fly.io platform server that receives webhook notifications from extension providers and sends CloudEvents to provider webhook endpoints.
+  name: flyio
+  protocol: https
+  url: https://api.fly.io
+- description: Provider-hosted server that receives CloudEvent webhook notifications from Fly.io about machine and account lifecycle events relevant to their extension resources.
+  name: provider
+  protocol: https
+  url: https://{provider_base_url}
+slug: fly-io-extensions-webhooks-asyncapi
+source_filename: fly-io-extensions-webhooks-asyncapi.yml
+source_heading: AsyncAPI Specification
+source_yaml: "asyncapi: 2.6.0\ninfo:\n  title: Fly.io Extensions Webhook Events\n  description: >-\n    The Fly.io Extensions webhook system delivers real-time event notifications\n    in both directions between Fly.io and extension providers. Fly.io sends\n    CloudEvents-format payloads to the provider's registered endpoint URL when\n    machine lifecycle events occur that are relevant to an extension resource.\n    Extension providers send lifecycle status updates back to Fly.io at the\n    platform webhook endpoint when asynchronously provisioned resources become\n    ready, are updated, or are deleted. All webhook payloads in both directions\n    are signed using HMAC-SHA256 with separate shared secrets, allowing each\n    party to verify authenticity before processing events.\n  version: '1.0'\n  contact:\n    name: Fly.io Extensions Program\n    url: https://fly.io/docs/reference/extensions_api/\n  termsOfService: https://fly.io/legal/terms-of-service/\nexternalDocs:\n  description:\
+  \ Fly.io Extensions API Documentation\n  url: https://fly.io/docs/reference/extensions_api/\nservers:\n  flyio:\n    url: 'https://api.fly.io'\n    protocol: https\n    description: >-\n      Fly.io platform server that receives webhook notifications from extension\n      providers and sends CloudEvents to provider webhook endpoints.\n    security:\n      - webhookHmac: []\n  provider:\n    url: 'https://{provider_base_url}'\n    protocol: https\n    description: >-\n      Provider-hosted server that receives CloudEvent webhook notifications from\n      Fly.io about machine and account lifecycle events relevant to their\n      extension resources.\n    variables:\n      provider_base_url:\n        description: The base URL of the extension provider's webhook receiver.\nchannels:\n  /api/hooks/extensions/{provider_name}:\n    description: >-\n      Fly.io platform endpoint that receives webhook notifications from extension\n      providers about resource lifecycle changes. Providers post\
+  \ to this channel\n      to notify Fly.io when asynchronously provisioned resources become ready,\n      when resource configuration changes, or when resources are removed.\n    parameters:\n      provider_name:\n        description: The registered slug identifier for the extension provider.\n        schema:\n          type: string\n    publish:\n      operationId: receiveProviderWebhook\n      summary: Receive a lifecycle webhook from an extension provider\n      description: >-\n        Fly.io receives this message from an extension provider when a resource\n        lifecycle event occurs. The payload is signed with the provider's\n        HMAC-SHA256 webhook signing secret. Fly.io verifies the signature\n        before updating the extension resource state on the platform.\n      message:\n        oneOf:\n          - $ref: '#/components/messages/ResourceCreated'\n          - $ref: '#/components/messages/ResourceUpdated'\n          - $ref: '#/components/messages/ResourceDeleted'\n  /extensions/events:\n\
+  \    description: >-\n      Provider-hosted endpoint that receives CloudEvents-format webhook\n      notifications from Fly.io about machine and account lifecycle events.\n      Providers register this endpoint with Fly.io and must verify the\n      HMAC-SHA256 signature on all incoming payloads.\n    subscribe:\n      operationId: receiveFlyioMachineEvent\n      summary: Receive a machine or account event from Fly.io\n      description: >-\n        Fly.io sends this CloudEvent to the provider's registered events\n        endpoint when a machine lifecycle event or account change occurs that\n        is relevant to the provider's extension resources. The payload is\n        signed using the webhook signing secret issued to the provider.\n      message:\n        oneOf:\n          - $ref: '#/components/messages/MachineStarted'\n          - $ref: '#/components/messages/MachineStopped'\n          - $ref: '#/components/messages/MachineDestroyed'\n          - $ref: '#/components/messages/AccountChanged'\n\
+  components:\n  securitySchemes:\n    webhookHmac:\n      type: httpApiKey\n      name: X-Fly-Signature\n      in: header\n      description: >-\n        HMAC-SHA256 signature computed over the raw request body using the\n        shared webhook signing secret. Recipients must recompute this signature\n        and compare it to the header value to verify the payload is authentic\n        and has not been tampered with.\n  messages:\n    ResourceCreated:\n      name: ResourceCreated\n      title: Extension Resource Created\n      summary: Notifies Fly.io that an extension resource has been provisioned\n      description: >-\n        Sent by an extension provider to confirm that an asynchronously\n        provisioned extension resource is now ready. The payload includes the\n        resource ID and the environment variable configuration to inject into\n        the user's Fly App.\n      contentType: application/json\n      headers:\n        type: object\n        properties:\n          X-Fly-Signature:\n\
+  \            type: string\n            description: HMAC-SHA256 signature of the request body.\n      payload:\n        $ref: '#/components/schemas/ProviderWebhookPayload'\n      examples:\n        - payload:\n            action: resource.created\n            resource_id: res_abc123\n            config:\n              REDIS_URL: rediss://default:password@host:6379\n    ResourceUpdated:\n      name: ResourceUpdated\n      title: Extension Resource Updated\n      summary: Notifies Fly.io that an extension resource has been updated\n      description: >-\n        Sent by an extension provider when a resource's configuration changes,\n        such as after a plan upgrade or region change. The updated config\n        object is applied to the user's Fly App environment variables.\n      contentType: application/json\n      headers:\n        type: object\n        properties:\n          X-Fly-Signature:\n            type: string\n            description: HMAC-SHA256 signature of the request body.\n\
+  \      payload:\n        $ref: '#/components/schemas/ProviderWebhookPayload'\n      examples:\n        - payload:\n            action: resource.updated\n            resource_id: res_abc123\n            config:\n              REDIS_URL: rediss://default:newpassword@newhost:6379\n    ResourceDeleted:\n      name: ResourceDeleted\n      title: Extension Resource Deleted\n      summary: Notifies Fly.io that an extension resource has been deleted\n      description: >-\n        Sent by an extension provider when a resource has been cleaned up and\n        is no longer available. Fly.io removes the associated environment\n        variables from the user's Fly App on receipt of this event.\n      contentType: application/json\n      headers:\n        type: object\n        properties:\n          X-Fly-Signature:\n            type: string\n            description: HMAC-SHA256 signature of the request body.\n      payload:\n        type: object\n        properties:\n          action:\n         \
+  \   type: string\n            enum: [resource.deleted]\n            description: The lifecycle action.\n          resource_id:\n            type: string\n            description: The provider's ID of the deleted resource.\n      examples:\n        - payload:\n            action: resource.deleted\n            resource_id: res_abc123\n    MachineStarted:\n      name: MachineStarted\n      title: Fly Machine Started\n      summary: Notifies the provider that a Fly Machine has started\n      description: >-\n        Fly.io sends this CloudEvent to the provider when a Fly Machine\n        associated with an extension resource starts running. The provider\n        can use this event to initialize connections or perform startup tasks.\n      contentType: application/json\n      headers:\n        type: object\n        properties:\n          X-Fly-Signature:\n            type: string\n            description: HMAC-SHA256 signature of the request body.\n      payload:\n        $ref: '#/components/schemas/CloudEventPayload'\n\
+  \      examples:\n        - payload:\n            specversion: '1.0'\n            type: io.fly.machine.started\n            source: https://api.fly.io\n            id: evt_01HXYZ\n            time: '2026-03-21T00:00:00Z'\n            datacontenttype: application/json\n            data:\n              machine_id: abc123def456\n              app_name: my-fly-app\n              region: iad\n    MachineStopped:\n      name: MachineStopped\n      title: Fly Machine Stopped\n      summary: Notifies the provider that a Fly Machine has stopped\n      description: >-\n        Fly.io sends this CloudEvent to the provider when a Fly Machine\n        associated with an extension resource stops. The provider can use\n        this event to release resources or record usage.\n      contentType: application/json\n      headers:\n        type: object\n        properties:\n          X-Fly-Signature:\n            type: string\n            description: HMAC-SHA256 signature of the request body.\n      payload:\n\
+  \        $ref: '#/components/schemas/CloudEventPayload'\n      examples:\n        - payload:\n            specversion: '1.0'\n            type: io.fly.machine.stopped\n            source: https://api.fly.io\n            id: evt_01HABC\n            time: '2026-03-21T01:00:00Z'\n            datacontenttype: application/json\n            data:\n              machine_id: abc123def456\n              app_name: my-fly-app\n              region: iad\n    MachineDestroyed:\n      name: MachineDestroyed\n      title: Fly Machine Destroyed\n      summary: Notifies the provider that a Fly Machine has been destroyed\n      description: >-\n        Fly.io sends this CloudEvent to the provider when a Fly Machine\n        associated with an extension resource is permanently destroyed.\n        Providers should clean up any resources or associations tied to\n        this machine instance.\n      contentType: application/json\n      headers:\n        type: object\n        properties:\n          X-Fly-Signature:\n\
+  \            type: string\n            description: HMAC-SHA256 signature of the request body.\n      payload:\n        $ref: '#/components/schemas/CloudEventPayload'\n    AccountChanged:\n      name: AccountChanged\n      title: Fly.io Account Changed\n      summary: Notifies the provider that a Fly.io account has changed\n      description: >-\n        Fly.io sends this CloudEvent to the provider when an account or\n        organization change occurs that may affect extension resources, such\n        as a user being removed from an organization or a billing status change.\n      contentType: application/json\n      headers:\n        type: object\n        properties:\n          X-Fly-Signature:\n            type: string\n            description: HMAC-SHA256 signature of the request body.\n      payload:\n        $ref: '#/components/schemas/CloudEventPayload'\n  schemas:\n    ProviderWebhookPayload:\n      type: object\n      description: >-\n        Payload sent by an extension provider\
+  \ to Fly.io for resource lifecycle\n        events.\n      required:\n        - action\n        - resource_id\n      properties:\n        action:\n          type: string\n          description: The lifecycle action that occurred on the provider's resource.\n          enum: [resource.created, resource.updated, resource.deleted]\n        resource_id:\n          type: string\n          description: The provider's unique identifier for the affected resource.\n        config:\n          type: object\n          description: >-\n            Updated environment variable configuration for the resource.\n            Required when action is resource.created or resource.updated.\n          additionalProperties:\n            type: string\n    CloudEventPayload:\n      type: object\n      description: >-\n        A CloudEvents 1.0 compliant payload sent by Fly.io to extension\n        provider webhook endpoints for machine and account events.\n      required:\n        - specversion\n        - type\n\
+  \        - source\n        - id\n      properties:\n        specversion:\n          type: string\n          description: CloudEvents specification version. Always 1.0.\n          enum: ['1.0']\n        type:\n          type: string\n          description: >-\n            Event type identifier in reverse-DNS notation, such as\n            io.fly.machine.started, io.fly.machine.stopped, or\n            io.fly.account.changed.\n        source:\n          type: string\n          description: URI of the Fly.io system that originated this event.\n          example: https://api.fly.io\n        id:\n          type: string\n          description: Unique identifier for this specific event instance.\n        time:\n          type: string\n          format: date-time\n          description: ISO 8601 timestamp of when the event occurred.\n        datacontenttype:\n          type: string\n          description: MIME type of the event data payload.\n          example: application/json\n        data:\n\
+  \          type: object\n          description: Event-specific data payload.\n          additionalProperties: true\n"
+source_yaml_url: https://raw.githubusercontent.com/api-evangelist/fly-io/refs/heads/main/asyncapi/fly-io-extensions-webhooks-asyncapi.yml
+spec_file: asyncapi/fly-io-extensions-webhooks-asyncapi.yml
+spec_url: https://raw.githubusercontent.com/api-evangelist/fly-io/refs/heads/main/asyncapi/fly-io-extensions-webhooks-asyncapi.yml
+tags:
+- AsyncAPI
+- Webhooks
+- Events
+version: '1.0'
+---
