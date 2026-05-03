@@ -115,11 +115,13 @@ spec_file: asyncapi/wasmcloud-lattice-events-asyncapi.yml
 spec_url: https://raw.githubusercontent.com/api-evangelist/wasmcloud/refs/heads/main/asyncapi/wasmcloud-lattice-events-asyncapi.yml
 tags:
 - Cloud Native
+- CNCF
 - Distributed Systems
 - Incubating
 - Runtime
 - Wasm
 - WebAssembly
+- WIT
 - AsyncAPI
 - Webhooks
 - Events

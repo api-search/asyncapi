@@ -132,6 +132,9 @@ tags:
 - Fintech
 - Investments
 - Securities
+- Fractional Investing
+- Custody
+- Wealth Management
 - AsyncAPI
 - Webhooks
 - Events

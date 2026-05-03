@@ -156,11 +156,13 @@ spec_file: asyncapi/wasmcloud-control-asyncapi.yml
 spec_url: https://raw.githubusercontent.com/api-evangelist/wasmcloud/refs/heads/main/asyncapi/wasmcloud-control-asyncapi.yml
 tags:
 - Cloud Native
+- CNCF
 - Distributed Systems
 - Incubating
 - Runtime
 - Wasm
 - WebAssembly
+- WIT
 - AsyncAPI
 - Webhooks
 - Events
