@@ -3,21 +3,15 @@ api_specs:
 - filename: logrocket-rest-api-openapi.yml
   format: yaml
   label: LogRocket REST API
-  slug: rest-api
+  slug: logrocket-rest-api
   spec_type: OpenAPI
   url: https://raw.githubusercontent.com/api-evangelist/logrocket/refs/heads/main/openapi/logrocket-rest-api-openapi.yml
 - filename: logrocket-graphql-api-openapi.yml
   format: yaml
   label: LogRocket GraphQL API
-  slug: graphql-api
+  slug: logrocket-graphql-api
   spec_type: OpenAPI
   url: https://raw.githubusercontent.com/api-evangelist/logrocket/refs/heads/main/openapi/logrocket-graphql-api-openapi.yml
-- filename: logrocket-highlights-webhook-asyncapi.yml
-  format: yaml
-  label: LogRocket Galileo Highlights API
-  slug: session-highlights-api
-  spec_type: AsyncAPI
-  url: https://raw.githubusercontent.com/api-evangelist/logrocket/refs/heads/main/asyncapi/logrocket-highlights-webhook-asyncapi.yml
 channels:
 - description: Webhook delivery channel for Galileo AI highlights results. LogRocket sends a POST request to the customer-specified URL when highlights generation is complete.
   name: /
@@ -50,11 +44,11 @@ source_yaml_url: https://raw.githubusercontent.com/api-evangelist/logrocket/refs
 spec_file: asyncapi/logrocket-highlights-webhook-asyncapi.yml
 spec_url: https://raw.githubusercontent.com/api-evangelist/logrocket/refs/heads/main/asyncapi/logrocket-highlights-webhook-asyncapi.yml
 tags:
-- Analytics
-- Error Monitoring
-- Frontend Monitoring
-- Observability
 - Session Replay
+- Product Analytics
+- Frontend Monitoring
+- Logging
+- Errors
 - AsyncAPI
 - Webhooks
 - Events

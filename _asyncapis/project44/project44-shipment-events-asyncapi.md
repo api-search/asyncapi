@@ -2,16 +2,10 @@
 api_specs:
 - filename: project44-tracking-openapi.yml
   format: yaml
-  label: project44 Tracking API
-  slug: project44-tracking-api
+  label: project44 API v4
+  slug: project44-api
   spec_type: OpenAPI
   url: https://raw.githubusercontent.com/api-evangelist/project44/refs/heads/main/openapi/project44-tracking-openapi.yml
-- filename: project44-shipment-events-asyncapi.yml
-  format: yaml
-  label: project44 Webhooks API
-  slug: project44-webhooks-api
-  spec_type: AsyncAPI
-  url: https://raw.githubusercontent.com/api-evangelist/project44/refs/heads/main/asyncapi/project44-shipment-events-asyncapi.yml
 channels:
 - description: Event published when a shipment status changes
   name: shipment/status-updated
@@ -86,11 +80,10 @@ spec_file: asyncapi/project44-shipment-events-asyncapi.yml
 spec_url: https://raw.githubusercontent.com/api-evangelist/project44/refs/heads/main/asyncapi/project44-shipment-events-asyncapi.yml
 tags:
 - Logistics
-- Freight
-- Supply Chain
-- Visibility
+- Supply Chain Visibility
 - Tracking
-- Transportation
+- Freight
+- Multi-modal
 - AsyncAPI
 - Webhooks
 - Events

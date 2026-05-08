@@ -1,35 +1,4 @@
 ---
-api_specs:
-- filename: affirm-direct-api-openapi.yml
-  format: yaml
-  label: Affirm Direct API
-  slug: direct-api
-  spec_type: OpenAPI
-  url: https://raw.githubusercontent.com/api-evangelist/affirm/refs/heads/main/openapi/affirm-direct-api-openapi.yml
-- filename: affirm-checkout-openapi.yml
-  format: yaml
-  label: Affirm Checkout API
-  slug: checkout-api
-  spec_type: OpenAPI
-  url: https://raw.githubusercontent.com/api-evangelist/affirm/refs/heads/main/openapi/affirm-checkout-openapi.yml
-- filename: affirm-transactions-openapi.yml
-  format: yaml
-  label: Affirm Transactions API
-  slug: transactions-api
-  spec_type: OpenAPI
-  url: https://raw.githubusercontent.com/api-evangelist/affirm/refs/heads/main/openapi/affirm-transactions-openapi.yml
-- filename: affirm-promos-openapi.yml
-  format: yaml
-  label: Affirm Promos API
-  slug: promos-api
-  spec_type: OpenAPI
-  url: https://raw.githubusercontent.com/api-evangelist/affirm/refs/heads/main/openapi/affirm-promos-openapi.yml
-- filename: affirm-disputes-openapi.yml
-  format: yaml
-  label: Affirm Disputes API
-  slug: disputes-api
-  spec_type: OpenAPI
-  url: https://raw.githubusercontent.com/api-evangelist/affirm/refs/heads/main/openapi/affirm-disputes-openapi.yml
 channels:
 - description: Channel for Affirm checkout lifecycle events. Affirm sends POST requests with content-type application/x-www-form-urlencoded to the merchant's configured webhook endpoint as customers progress through the checkout flow.
   name: /webhooks/checkout
@@ -69,7 +38,7 @@ messages:
   summary: Fired when a customer's prequalification expires.
   title: Prequalification Expiry
 name: Affirm Webhooks
-provider_name: affirm
+provider_name: Affirm
 provider_slug: affirm
 servers:
 - description: The merchant-configured HTTPS endpoint that receives webhook event notifications from Affirm. Must support TLS 1.2 and respond with a 2xx HTTP status to acknowledge receipt.
@@ -99,6 +68,11 @@ source_yaml_url: https://raw.githubusercontent.com/api-evangelist/affirm/refs/he
 spec_file: asyncapi/affirm-webhooks-asyncapi.yml
 spec_url: https://raw.githubusercontent.com/api-evangelist/affirm/refs/heads/main/asyncapi/affirm-webhooks-asyncapi.yml
 tags:
+- Fintech
+- BNPL
+- Lending
+- Payments
+- Consumer
 - AsyncAPI
 - Webhooks
 - Events

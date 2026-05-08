@@ -3,25 +3,25 @@ api_specs:
 - filename: fullstory-server-api-openapi.yml
   format: yaml
   label: FullStory Server API
-  slug: server-api
+  slug: fullstory-server-api
   spec_type: OpenAPI
   url: https://raw.githubusercontent.com/api-evangelist/fullstory/refs/heads/main/openapi/fullstory-server-api-openapi.yml
-- filename: fullstory-segments-export-api-openapi.yml
-  format: yaml
-  label: FullStory Segments Export API
-  slug: segments-export-api
-  spec_type: OpenAPI
-  url: https://raw.githubusercontent.com/api-evangelist/fullstory/refs/heads/main/openapi/fullstory-segments-export-api-openapi.yml
 - filename: fullstory-sessions-api-openapi.yml
   format: yaml
   label: FullStory Sessions API
-  slug: sessions-api
+  slug: fullstory-sessions-api
   spec_type: OpenAPI
   url: https://raw.githubusercontent.com/api-evangelist/fullstory/refs/heads/main/openapi/fullstory-sessions-api-openapi.yml
+- filename: fullstory-segments-export-api-openapi.yml
+  format: yaml
+  label: FullStory Segments Export API
+  slug: fullstory-segments-export-api
+  spec_type: OpenAPI
+  url: https://raw.githubusercontent.com/api-evangelist/fullstory/refs/heads/main/openapi/fullstory-segments-export-api-openapi.yml
 - filename: fullstory-webhooks-api-openapi.yml
   format: yaml
   label: FullStory Webhooks API
-  slug: webhooks-api
+  slug: fullstory-webhooks-api
   spec_type: OpenAPI
   url: https://raw.githubusercontent.com/api-evangelist/fullstory/refs/heads/main/openapi/fullstory-webhooks-api-openapi.yml
 channels:
@@ -74,11 +74,11 @@ source_yaml_url: https://raw.githubusercontent.com/api-evangelist/fullstory/refs
 spec_file: asyncapi/fullstory-webhooks-asyncapi.yml
 spec_url: https://raw.githubusercontent.com/api-evangelist/fullstory/refs/heads/main/asyncapi/fullstory-webhooks-asyncapi.yml
 tags:
-- Analytics
-- Digital Experience
 - Session Replay
-- Webhooks
-- Data Export
+- Product Analytics
+- Digital Experience
+- Behavioral Analytics
+- Frontend Monitoring
 - AsyncAPI
 - Webhooks
 - Events

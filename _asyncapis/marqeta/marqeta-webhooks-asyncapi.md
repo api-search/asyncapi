@@ -8,16 +8,10 @@ api_specs:
   url: https://raw.githubusercontent.com/api-evangelist/marqeta/refs/heads/main/openapi/marqeta-core-api-openapi.yml
 - filename: marqeta-diva-api-openapi.yml
   format: yaml
-  label: Marqeta DiVA API
+  label: Marqeta Diva API
   slug: diva-api
   spec_type: OpenAPI
   url: https://raw.githubusercontent.com/api-evangelist/marqeta/refs/heads/main/openapi/marqeta-diva-api-openapi.yml
-- filename: marqeta-webhooks-asyncapi.yml
-  format: yaml
-  label: Marqeta Webhooks
-  slug: webhooks
-  spec_type: AsyncAPI
-  url: https://raw.githubusercontent.com/api-evangelist/marqeta/refs/heads/main/asyncapi/marqeta-webhooks-asyncapi.yml
 channels:
 - description: 'Marqeta sends all webhook events as HTTP POST requests to your registered endpoint URL. Each request contains a JSON payload with the event type and the full Marqeta object associated with the triggering event. Events are grouped into categories: transaction events, card transition events, user transition events, business transition events, GPA order events, and charge-back events. Your endpoint must respond with HTTP 200 to acknowledge receipt.'
   name: /webhook
@@ -92,7 +86,7 @@ messages:
   summary: A chargeback transitioned to a new state in the dispute lifecycle.
   title: Chargeback Transition
 name: Marqeta Webhooks
-provider_name: marqeta
+provider_name: Marqeta
 provider_slug: marqeta
 servers:
 - description: Your HTTPS webhook endpoint. Marqeta requires HTTPS for all webhook delivery URLs. Configure this URL in the Marqeta Core API by creating a webhook resource at POST /webhooks with the config.url field set to your endpoint. Set basic_auth_username and basic_auth_password in the config to require Basic Auth on your endpoint.
@@ -132,6 +126,11 @@ source_yaml_url: https://raw.githubusercontent.com/api-evangelist/marqeta/refs/h
 spec_file: asyncapi/marqeta-webhooks-asyncapi.yml
 spec_url: https://raw.githubusercontent.com/api-evangelist/marqeta/refs/heads/main/asyncapi/marqeta-webhooks-asyncapi.yml
 tags:
+- FinTech
+- BaaS
+- Card Issuing
+- Payments
+- Embedded Finance
 - AsyncAPI
 - Webhooks
 - Events

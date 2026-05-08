@@ -1,23 +1,4 @@
 ---
-api_specs:
-- filename: ghost-content-api-openapi.yml
-  format: yaml
-  label: Ghost Content API
-  slug: content-api
-  spec_type: OpenAPI
-  url: https://raw.githubusercontent.com/api-evangelist/ghost/refs/heads/main/openapi/ghost-content-api-openapi.yml
-- filename: ghost-admin-api-openapi.yml
-  format: yaml
-  label: Ghost Admin API
-  slug: admin-api
-  spec_type: OpenAPI
-  url: https://raw.githubusercontent.com/api-evangelist/ghost/refs/heads/main/openapi/ghost-admin-api-openapi.yml
-- filename: ghost-webhooks-asyncapi.yml
-  format: yaml
-  label: Ghost Webhooks
-  slug: webhooks
-  spec_type: AsyncAPI
-  url: https://raw.githubusercontent.com/api-evangelist/ghost/refs/heads/main/asyncapi/ghost-webhooks-asyncapi.yml
 channels:
 - description: Triggered whenever any content changes in the site data or settings. This is a catch-all event useful for triggering site rebuilds or cache invalidation.
   name: /webhook/site.changed
@@ -225,12 +206,11 @@ source_yaml_url: https://raw.githubusercontent.com/api-evangelist/ghost/refs/hea
 spec_file: asyncapi/ghost-webhooks-asyncapi.yml
 spec_url: https://raw.githubusercontent.com/api-evangelist/ghost/refs/heads/main/asyncapi/ghost-webhooks-asyncapi.yml
 tags:
-- Content Management
 - Publishing
-- Headless CMS
-- Blogging
 - Newsletters
 - Memberships
+- Content
+- Open Source
 - AsyncAPI
 - Webhooks
 - Events
