@@ -420,6 +420,18 @@ api_specs:
   slug: microsoft-graph-users
   spec_type: OpenAPI
   url: https://raw.githubusercontent.com/api-evangelist/microsoft-graph/refs/heads/main/openapi/users-openapi-original.yml
+- filename: sites-openapi-original.yml
+  format: yaml
+  label: Sites
+  slug: sites
+  spec_type: OpenAPI
+  url: https://raw.githubusercontent.com/api-evangelist/microsoft-graph/refs/heads/main/openapi/sites-openapi-original.yml
+- filename: sites-openapi-original.yml
+  format: yaml
+  label: Sites
+  slug: sites
+  spec_type: OpenAPI
+  url: https://raw.githubusercontent.com/api-evangelist/microsoft-graph/refs/heads/main/openapi/sites-openapi-original.yml
 channels:
 - description: The webhook endpoint hosted by the subscribing application. Microsoft Graph sends HTTP POST requests to this URL when changes occur in subscribed resources. The endpoint must support HTTPS, respond to validation requests during subscription creation, and return HTTP 202 Accepted for notification deliveries.
   name: /webhook
