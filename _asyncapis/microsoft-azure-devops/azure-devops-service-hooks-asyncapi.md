@@ -3,61 +3,61 @@ api_specs:
 - filename: openapi.yaml
   format: yaml
   label: Azure DevOps Services REST API
-  slug: ''
+  slug: azure-devops-services-rest-api
   spec_type: OpenAPI
   url: https://learn.microsoft.com/en-us/rest/api/azure/devops/
 - filename: azure-devops-work-items-api-openapi.yml
   format: yaml
   label: Azure DevOps Boards API
-  slug: ''
+  slug: azure-devops-boards-api
   spec_type: OpenAPI
   url: https://raw.githubusercontent.com/api-evangelist/microsoft-azure-devops/refs/heads/main/openapi/azure-devops-work-items-api-openapi.yml
 - filename: azure-devops-git-api-openapi.yml
   format: yaml
   label: Azure DevOps Repos API
-  slug: ''
+  slug: azure-devops-repos-api
   spec_type: OpenAPI
   url: https://raw.githubusercontent.com/api-evangelist/microsoft-azure-devops/refs/heads/main/openapi/azure-devops-git-api-openapi.yml
 - filename: azure-devops-pipelines-api-openapi.yml
   format: yaml
   label: Azure DevOps Pipelines API
-  slug: ''
+  slug: azure-devops-pipelines-api
   spec_type: OpenAPI
   url: https://raw.githubusercontent.com/api-evangelist/microsoft-azure-devops/refs/heads/main/openapi/azure-devops-pipelines-api-openapi.yml
 - filename: azure-devops-builds-api-openapi.yml
   format: yaml
   label: Azure DevOps Build API
-  slug: ''
+  slug: azure-devops-build-api
   spec_type: OpenAPI
   url: https://raw.githubusercontent.com/api-evangelist/microsoft-azure-devops/refs/heads/main/openapi/azure-devops-builds-api-openapi.yml
 - filename: azure-devops-releases-api-openapi.yml
   format: yaml
   label: Azure DevOps Release API
-  slug: ''
+  slug: azure-devops-release-api
   spec_type: OpenAPI
   url: https://raw.githubusercontent.com/api-evangelist/microsoft-azure-devops/refs/heads/main/openapi/azure-devops-releases-api-openapi.yml
 - filename: azure-devops-test-plans-api-openapi.yml
   format: yaml
   label: Azure DevOps Test Plans API
-  slug: ''
+  slug: azure-devops-test-plans-api
   spec_type: OpenAPI
   url: https://raw.githubusercontent.com/api-evangelist/microsoft-azure-devops/refs/heads/main/openapi/azure-devops-test-plans-api-openapi.yml
 - filename: azure-devops-artifacts-api-openapi.yml
   format: yaml
   label: Azure DevOps Artifacts API
-  slug: ''
+  slug: azure-devops-artifacts-api
   spec_type: OpenAPI
   url: https://raw.githubusercontent.com/api-evangelist/microsoft-azure-devops/refs/heads/main/openapi/azure-devops-artifacts-api-openapi.yml
 - filename: azure-devops-service-hooks-api-openapi.yml
   format: yaml
   label: Azure DevOps Service Hooks API
-  slug: ''
+  slug: azure-devops-service-hooks-api
   spec_type: OpenAPI
   url: https://raw.githubusercontent.com/api-evangelist/microsoft-azure-devops/refs/heads/main/openapi/azure-devops-service-hooks-api-openapi.yml
 - filename: azure-devops-wiki-api-openapi.yml
   format: yaml
   label: Azure DevOps Wiki API
-  slug: ''
+  slug: azure-devops-wiki-api
   spec_type: OpenAPI
   url: https://raw.githubusercontent.com/api-evangelist/microsoft-azure-devops/refs/heads/main/openapi/azure-devops-wiki-api-openapi.yml
 channels:

@@ -3,19 +3,19 @@ api_specs:
 - filename: rest_api_swagger.json
   format: json
   label: IBM MQ REST API
-  slug: ''
+  slug: ibm-mq-rest-api
   spec_type: OpenAPI
   url: https://www.ibm.com/docs/en/SSFKSJ_9.3.0/com.ibm.mq.dev.doc/rest_api_swagger.json
 - filename: messaging_rest_api_swagger.json
   format: json
   label: IBM MQ Messaging REST API
-  slug: ''
+  slug: ibm-mq-messaging-rest-api
   spec_type: OpenAPI
   url: https://www.ibm.com/docs/en/SSFKSJ_9.3.0/com.ibm.mq.dev.doc/messaging_rest_api_swagger.json
 - filename: ibm-mq-messaging-asyncapi.yml
   format: yaml
   label: IBM MQ JMS API
-  slug: ''
+  slug: ibm-mq-jms-api
   spec_type: AsyncAPI
   url: https://raw.githubusercontent.com/api-evangelist/ibm-mq/refs/heads/main/asyncapi/ibm-mq-messaging-asyncapi.yml
 channels:

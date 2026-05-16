@@ -3,25 +3,25 @@ api_specs:
 - filename: openapi.yaml
   format: yaml
   label: Oracle REST Data Services (ORDS)
-  slug: ''
+  slug: oracle-rest-data-services-ords
   spec_type: OpenAPI
   url: https://docs.oracle.com/en/database/oracle/oracle-rest-data-services/
 - filename: openapi.yaml
   format: yaml
   label: Oracle Cloud Infrastructure Database API
-  slug: ''
+  slug: oracle-cloud-infrastructure-database-api
   spec_type: OpenAPI
   url: https://docs.oracle.com/iaas/api/#/en/database/
 - filename: oracle-database-soda-openapi.yml
   format: yaml
   label: Oracle SODA (Simple Oracle Document Access)
-  slug: ''
+  slug: oracle-soda-simple-oracle-document-access
   spec_type: OpenAPI
   url: https://raw.githubusercontent.com/api-evangelist/oracle-database/refs/heads/main/openapi/oracle-database-soda-openapi.yml
 - filename: oracle-database-txeventq-asyncapi.yml
   format: yaml
   label: Oracle Transactional Event Queues (TxEventQ)
-  slug: ''
+  slug: oracle-transactional-event-queues-txeventq
   spec_type: AsyncAPI
   url: https://raw.githubusercontent.com/api-evangelist/oracle-database/refs/heads/main/asyncapi/oracle-database-txeventq-asyncapi.yml
 channels:

@@ -3,19 +3,19 @@ api_specs:
 - filename: resource-manager
   format: yaml
   label: Azure Event Hubs REST API
-  slug: ''
+  slug: azure-event-hubs-rest-api
   spec_type: OpenAPI
   url: https://github.com/Azure/azure-rest-api-specs/tree/main/specification/eventhub/resource-manager
 - filename: data-plane
   format: yaml
   label: Azure Event Hubs Data Plane API
-  slug: ''
+  slug: azure-event-hubs-data-plane-api
   spec_type: OpenAPI
   url: https://github.com/Azure/azure-rest-api-specs/tree/main/specification/eventhub/data-plane
 - filename: azure-event-hubs-messaging-asyncapi.yml
   format: yaml
   label: Azure Event Hubs Messaging API
-  slug: ''
+  slug: azure-event-hubs-messaging-api
   spec_type: AsyncAPI
   url: https://raw.githubusercontent.com/api-evangelist/microsoft-azure-event-hubs/refs/heads/main/asyncapi/azure-event-hubs-messaging-asyncapi.yml
 channels:

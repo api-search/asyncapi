@@ -3,7 +3,7 @@ api_specs:
 - filename: swagger.json
   format: json
   label: Oracle Siebel REST API
-  slug: ''
+  slug: oracle-siebel-rest-api
   spec_type: OpenAPI
   url: https://{siebel-server}/siebel/v1.0/swagger.json
 channels:

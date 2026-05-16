@@ -3,7 +3,7 @@ api_specs:
 - filename: webflux-websocket-asyncapi.yml
   format: yaml
   label: Spring WebFlux WebSocket
-  slug: ''
+  slug: spring-webflux-websocket
   spec_type: AsyncAPI
   url: https://raw.githubusercontent.com/api-evangelist/webflux/refs/heads/main/asyncapi/webflux-websocket-asyncapi.yml
 channels:
