@@ -38,7 +38,7 @@ api_specs:
   url: https://raw.githubusercontent.com/api-evangelist/postman/refs/heads/main/openapi/postman-monitors-api-openapi.yml
 - filename: postman-apis-api-openapi.yml
   format: yaml
-  label: Postman APIs API
+  label: Postman APIs / Spec Hub API
   slug: apis-api
   spec_type: OpenAPI
   url: https://raw.githubusercontent.com/api-evangelist/postman/refs/heads/main/openapi/postman-apis-api-openapi.yml
@@ -139,24 +139,48 @@ spec_file: asyncapi/postman-webhooks-asyncapi.yml
 spec_url: https://raw.githubusercontent.com/api-evangelist/postman/refs/heads/main/asyncapi/postman-webhooks-asyncapi.yml
 tags:
 - AI Agent Builder
+- AI Agents
+- API Catalog
+- API Client
+- API Design
 - API Development
 - API Documentation
 - API Governance
+- API Lifecycle
 - API Monitoring
+- API Network
+- API Platform
 - API Testing
+- Audit Logs
 - Automation
-- Client
-- Clients
+- CI/CD
 - Collaboration
 - Collections
+- Compliance
 - Discovery
 - Environments
+- Flows
+- GraphQL
+- gRPC
+- HTTP
+- Insights
 - MCP
+- MCP Generator
 - Mock Servers
 - Mocking
-- Network
+- Monitors
+- Newman
+- OpenAPI
 - Platform
+- Private API Network
+- Public API Network
+- Secret Scanning
+- Spec Hub
+- Specifications
+- SSO
 - Testing
+- Vault
+- WebSocket
 - Workflows
 - Workspaces
 - AsyncAPI

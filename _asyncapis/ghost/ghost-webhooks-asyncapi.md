@@ -1,4 +1,17 @@
 ---
+api_specs:
+- filename: ghost-admin-api-openapi.yml
+  format: yaml
+  label: Ghost Admin API
+  slug: ghost-admin-api
+  spec_type: OpenAPI
+  url: https://raw.githubusercontent.com/api-evangelist/ghost/refs/heads/main/openapi/ghost-admin-api-openapi.yml
+- filename: ghost-content-api-openapi.yml
+  format: yaml
+  label: Ghost Content API
+  slug: ghost-content-api
+  spec_type: OpenAPI
+  url: https://raw.githubusercontent.com/api-evangelist/ghost/refs/heads/main/openapi/ghost-content-api-openapi.yml
 channels:
 - description: Triggered whenever any content changes in the site data or settings. This is a catch-all event useful for triggering site rebuilds or cache invalidation.
   name: /webhook/site.changed
